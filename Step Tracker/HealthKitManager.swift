@@ -12,6 +12,9 @@ import HealthKit
     
     let types: Set = [HKQuantityType(.stepCount), HKQuantityType(.bodyMass)]
     
+    var stepData: [HealthMetric] = []
+    var weightData: [HealthMetric] = []
+    
     func fetchStepCount() async {
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: .now)
@@ -26,6 +29,10 @@ import HealthKit
                                                                intervalComponents: .init(day: 1))
         
         let stepCounts = try! await stepsQuery.result(for: store)
+        
+        stepData = stepCounts.statistics().map {
+            .init(date: $0.startDate, value: $0.sumQuantity()?.doubleValue(for: .count()) ?? 0)
+        }
     }
     
     func fetchWeights() async {
@@ -42,6 +49,10 @@ import HealthKit
                                                                intervalComponents: .init(day: 1))
         
         let weights = try! await weightQuery.result(for: store)
+        
+        weightData = weights.statistics().map {
+            .init(date: $0.startDate, value: $0.mostRecentQuantity()?.doubleValue(for: .pound()) ?? 0)
+        }
     }
     
 //    func addSimulatorData() async {
