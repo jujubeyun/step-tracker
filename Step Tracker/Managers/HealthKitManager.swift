@@ -9,7 +9,7 @@ import HealthKit
 
 enum STError: Error {
     case authNotDetermined
-    case sharingDenied(qunantityType: String)
+    case sharingDenied(quantityType: String)
     case noData
     case unableToCompleteRequest
 }
@@ -114,7 +114,7 @@ enum STError: Error {
         case .notDetermined:
             throw STError.authNotDetermined
         case .sharingDenied:
-            throw STError.sharingDenied(qunantityType: "step count")
+            throw STError.sharingDenied(quantityType: "step count")
         case .sharingAuthorized:
             break
         @unknown default:
@@ -138,7 +138,7 @@ enum STError: Error {
         case .notDetermined:
             throw STError.authNotDetermined
         case .sharingDenied:
-            throw STError.sharingDenied(qunantityType: "weight")
+            throw STError.sharingDenied(quantityType: "weight")
         case .sharingAuthorized:
             break
         @unknown default:
