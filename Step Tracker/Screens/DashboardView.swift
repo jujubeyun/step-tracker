@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-enum HealthMetricContent: CaseIterable, Identifiable {
+enum HealthMetricContext: CaseIterable, Identifiable {
     case steps, weight
     var id: Self { self }
     
@@ -26,7 +26,7 @@ struct DashboardView: View {
     
     @Environment(HealthKitManager.self) private var hkManager
     @State private var isShowingPermissionPrimingSheet = false
-    @State private var selectedStat: HealthMetricContent = .steps
+    @State private var selectedStat: HealthMetricContext = .steps
     @State private var isShowingAlert = false
     @State private var fetchError: STError = .noData
     var isSteps: Bool { selectedStat == .steps }
@@ -36,7 +36,7 @@ struct DashboardView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     Picker("Selected Stat", selection: $selectedStat) {
-                        ForEach(HealthMetricContent.allCases) {
+                        ForEach(HealthMetricContext.allCases) {
                             Text($0.title)
                         }
                     }
@@ -44,10 +44,10 @@ struct DashboardView: View {
                     
                     switch selectedStat {
                     case .steps:
-                        StepBarChart(selectedStat: selectedStat, chartData: hkManager.stepData)
+                        StepBarChart(chartData: ChartHelper.convert(data: hkManager.stepData))
                         StepPieChart(chartData: ChartMath.averageWeekdayCount(for: hkManager.stepData))
                     case .weight:
-                        WeightLineChart(selectedStat: selectedStat, chartData: hkManager.weightData)
+                        WeightLineChart(chartData: ChartHelper.convert(data: hkManager.weightData))
                         WeightDiffBarChart(chartData: ChartMath.averageDailyWeightDiffs(for: hkManager.weightDiffData))
                     }
                 }
@@ -69,7 +69,7 @@ struct DashboardView: View {
                 }
             }
             .navigationTitle("Dashboard")
-            .navigationDestination(for: HealthMetricContent.self) { metric in
+            .navigationDestination(for: HealthMetricContext.self) { metric in
                 HealthDataListView(metric: metric)
             }
             .sheet(isPresented: $isShowingPermissionPrimingSheet, onDismiss: {
