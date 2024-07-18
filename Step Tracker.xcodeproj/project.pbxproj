@@ -19,6 +19,7 @@
 		6B00AE4B2C47B9FE009F6807 /* ChartContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B00AE4A2C47B9FE009F6807 /* ChartContainer.swift */; };
 		6B00AE4D2C48A577009F6807 /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B00AE4C2C48A577009F6807 /* ChartHelper.swift */; };
 		6B00AE512C48A86F009F6807 /* ChartAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B00AE502C48A86F009F6807 /* ChartAnnotationView.swift */; };
+		6B00AE532C48D8DE009F6807 /* STError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B00AE522C48D8DE009F6807 /* STError.swift */; };
 		6B0815632C3BC7790029F2A7 /* HealthDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0815622C3BC7790029F2A7 /* HealthDataListView.swift */; };
 		6B0C53712C3CCA3900AF7079 /* HealthKitPermissionPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0C53702C3CCA3900AF7079 /* HealthKitPermissionPrimingView.swift */; };
 		6B2602632C39173B00C8F64C /* Step_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2602622C39173B00C8F64C /* Step_TrackerApp.swift */; };
@@ -42,6 +43,7 @@
 		6B00AE4A2C47B9FE009F6807 /* ChartContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartContainer.swift; sourceTree = "<group>"; };
 		6B00AE4C2C48A577009F6807 /* ChartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
 		6B00AE502C48A86F009F6807 /* ChartAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartAnnotationView.swift; sourceTree = "<group>"; };
+		6B00AE522C48D8DE009F6807 /* STError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STError.swift; sourceTree = "<group>"; };
 		6B0815622C3BC7790029F2A7 /* HealthDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataListView.swift; sourceTree = "<group>"; };
 		6B0C53702C3CCA3900AF7079 /* HealthKitPermissionPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionPrimingView.swift; sourceTree = "<group>"; };
 		6B0C53722C3E3E3500AF7079 /* Step Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Step Tracker.entitlements"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				6B00AE382C40BCB9009F6807 /* Extensions */,
 				6B00AE442C41090B009F6807 /* MockData.swift */,
+				6B00AE522C48D8DE009F6807 /* STError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				6B00AE452C41090B009F6807 /* MockData.swift in Sources */,
 				6B00AE492C47A884009F6807 /* ChartEmptyView.swift in Sources */,
 				6B2602632C39173B00C8F64C /* Step_TrackerApp.swift in Sources */,
+				6B00AE532C48D8DE009F6807 /* STError.swift in Sources */,
 				6BE7BFB42C3E443A00E17406 /* HealthKitManager.swift in Sources */,
 				6B0C53712C3CCA3900AF7079 /* HealthKitPermissionPrimingView.swift in Sources */,
 				6B00AE4D2C48A577009F6807 /* ChartHelper.swift in Sources */,
