@@ -16,7 +16,7 @@ struct HealthDataListView: View {
     @State private var addDataDate: Date = .now
     @State private var valueToAdd: String = ""
 
-    var metric: HealthMetricContent
+    var metric: HealthMetricContext
     
     var listData: [HealthMetric] {
         metric == .steps ? hkManager.stepData : hkManager.weightData
