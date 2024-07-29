@@ -9,10 +9,18 @@ import Foundation
 import Algorithms
 
 struct ChartHelper {
+    /// Convert from array of ``HealthMetric`` to array of ``DateValueChartData``
+    /// - Parameter data: array of ``HealthMetric`` to convert
+    /// - Returns: array of ``DateValueChartData``
     static func convert(data: [HealthMetric]) -> [DateValueChartData] {
         data.map { .init(date: $0.date, value: $0.value) }
     }
     
+    /// Finds selected date from array of ``DateValueChartData``
+    /// - Parameters:
+    ///   - data: Chart data array
+    ///   - selectedDate: Date that user selected
+    /// - Returns: Selected Date from array of ``DateValueChartData``
     static func parseSelectedData(from data: [DateValueChartData], in selectedDate: Date?) -> DateValueChartData? {
         guard let selectedDate else { return nil }
         return data.first {
@@ -20,6 +28,9 @@ struct ChartHelper {
         }
     }
     
+    /// Calculate average weekday step count with array of ``HealthMetric``
+    /// - Parameter metric: array of ``HealthMetric``
+    /// - Returns: Array of weekdays' average step count
     static func averageWeekdayCount(for metric: [HealthMetric]) -> [DateValueChartData] {
         let sortedByWeekday = metric.sorted(using: KeyPathComparator(\.date.weekdayInt))
         let weekdayArray = sortedByWeekday.chunked { $0.date.weekdayInt == $1.date.weekdayInt }
@@ -36,6 +47,9 @@ struct ChartHelper {
         return weekdayChartData
     }
     
+    /// Calculate average weekday weight difference with array of ``HealthMetric``
+    /// - Parameter weights: array of ``HealthMetric``
+    /// - Returns: Array of weekdays' average weight difference
     static func averageDailyWeightDiffs(for weights: [HealthMetric]) -> [DateValueChartData] {
         var diffValues: [(date: Date, value: Double)] = []
         
