@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,16 @@
 		6BE7BFB82C3FD07E00E17406 /* StepBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE7BFB72C3FD07E00E17406 /* StepBarChart.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6B7753232CCA813E001452AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B2602572C39173B00C8F64C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B26025E2C39173B00C8F64C;
+			remoteInfo = "Step Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		6B00AE362C40BB17009F6807 /* ChartDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataTypes.swift; sourceTree = "<group>"; };
 		6B00AE392C40BCCC009F6807 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
@@ -52,10 +62,15 @@
 		6B2602642C39173B00C8F64C /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		6B2602662C39173D00C8F64C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B2602692C39173D00C8F64C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6B77531F2CCA813E001452AB /* Step Tracker Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Step Tracker Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE7BFB32C3E443A00E17406 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		6BE7BFB52C3F99C100E17406 /* HealthMetric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMetric.swift; sourceTree = "<group>"; };
 		6BE7BFB72C3FD07E00E17406 /* StepBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBarChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6B7753202CCA813E001452AB /* Step Tracker Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Step Tracker Tests"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6B26025C2C39173B00C8F64C /* Frameworks */ = {
@@ -63,6 +78,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B00AE3D2C40C080009F6807 /* Algorithms in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B77531C2CCA813E001452AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				6B2602612C39173B00C8F64C /* Step Tracker */,
+				6B7753202CCA813E001452AB /* Step Tracker Tests */,
 				6B2602602C39173B00C8F64C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				6B26025F2C39173B00C8F64C /* Step Tracker.app */,
+				6B77531F2CCA813E001452AB /* Step Tracker Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +241,29 @@
 			productReference = 6B26025F2C39173B00C8F64C /* Step Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6B77531E2CCA813E001452AB /* Step Tracker Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B7753272CCA813E001452AB /* Build configuration list for PBXNativeTarget "Step Tracker Tests" */;
+			buildPhases = (
+				6B77531B2CCA813E001452AB /* Sources */,
+				6B77531C2CCA813E001452AB /* Frameworks */,
+				6B77531D2CCA813E001452AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B7753242CCA813E001452AB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6B7753202CCA813E001452AB /* Step Tracker Tests */,
+			);
+			name = "Step Tracker Tests";
+			packageProductDependencies = (
+			);
+			productName = "Step Tracker Tests";
+			productReference = 6B77531F2CCA813E001452AB /* Step Tracker Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -224,11 +271,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1540;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					6B26025E2C39173B00C8F64C = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					6B77531E2CCA813E001452AB = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 6B26025E2C39173B00C8F64C;
 					};
 				};
 			};
@@ -249,6 +300,7 @@
 			projectRoot = "";
 			targets = (
 				6B26025E2C39173B00C8F64C /* Step Tracker */,
+				6B77531E2CCA813E001452AB /* Step Tracker Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +312,13 @@
 			files = (
 				6B26026A2C39173D00C8F64C /* Preview Assets.xcassets in Resources */,
 				6B2602672C39173D00C8F64C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B77531D2CCA813E001452AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +351,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B77531B2CCA813E001452AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B7753242CCA813E001452AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B26025E2C39173B00C8F64C /* Step Tracker */;
+			targetProxy = 6B7753232CCA813E001452AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6B26026B2C39173D00C8F64C /* Debug */ = {
@@ -478,6 +552,44 @@
 			};
 			name = Release;
 		};
+		6B7753252CCA813E001452AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MY6C9CN9TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jhyun.Step-Tracker-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Step Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Step Tracker";
+			};
+			name = Debug;
+		};
+		6B7753262CCA813E001452AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MY6C9CN9TM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jhyun.Step-Tracker-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Step Tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Step Tracker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -495,6 +607,15 @@
 			buildConfigurations = (
 				6B26026E2C39173D00C8F64C /* Debug */,
 				6B26026F2C39173D00C8F64C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B7753272CCA813E001452AB /* Build configuration list for PBXNativeTarget "Step Tracker Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B7753252CCA813E001452AB /* Debug */,
+				6B7753262CCA813E001452AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
